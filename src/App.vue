@@ -693,11 +693,4 @@ h1 {
 #app {
   height: 100%;
 }
-
-.blocklyToolboxDiv {
-  height: 200px !important;
-}
-.injectionDiv svg {
-  height: 200px !important;
-}
 </style>
