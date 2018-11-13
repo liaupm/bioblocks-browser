@@ -690,6 +690,10 @@ h1 {
   content: "\f12e";
 }
 
+#app {
+  height: 100%;
+}
+
 .blocklyToolboxDiv {
   height: 200px !important;
 }
