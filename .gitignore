@@ -19,3 +19,11 @@ yarn-error.log*
 *.njsproj
 *.sln
 *.sw*
+
+# Ignore closure-library's symlink
+public/closure-library
+dist/closure-library
+
+# Ignore closure-library's symlink
+public/blockly
+dist/blockly
