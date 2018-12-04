@@ -1,9 +1,10 @@
 import Vue from "vue";
 import Router from "vue-router";
 //import Home from "./views/Home.vue";
-import App from "./App";
+//import App from "./App";
 import LandingPage from "./components/marketing/LandingPage";
 import About from "./components/marketing/About";
+import TodoBio from "./components/TodoBio";
 import Login from "./components/auth/Login";
 import Register from "./components/auth/Register";
 import Logout from "./components/auth/Logout";
@@ -21,7 +22,7 @@ export default new Router({
     {
       path: "/bioblocks",
       name: "bioblocks",
-      component: App
+      component: TodoBio
     },
     {
       path: "/about",

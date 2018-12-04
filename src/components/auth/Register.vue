@@ -35,7 +35,7 @@
           callback(new Error('Please input the password'));
         } else {
           if (this.ruleForm1.checkPass !== '') {
-            this.$refs.ruleForm2.validateField('checkPass');
+            callback();
           }
           callback();
         }
@@ -44,7 +44,7 @@
         if (value === '') {
           callback(new Error('Please input the password again'));
         } else if (value !== this.ruleForm1.pass) {
-          callback(new Error('Two inputs don\'t match!'));
+          callback(new Error('The inputs don\'t match!'));
         } else {
           callback();
         }
@@ -62,7 +62,8 @@
             { required: true, message: 'Please input Username', trigger: 'blur' }  
           ],
           email: [
-            { required: true, message: 'Please input Email', trigger: 'blur' }  
+            { required: true, message: 'Please input Email', trigger: 'blur' },
+            {type: 'email', message: 'Please input correct email address', trigger: ['blur', 'change']}
           ],
           pass: [
             { validator: validatePass, trigger: 'blur' }

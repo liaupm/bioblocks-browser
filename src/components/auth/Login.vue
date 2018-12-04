@@ -2,7 +2,7 @@
     <div class ="login-form">
         <h2>Login</h2>
         
-        <el-form :model="ruleForm" status-icon :rules="rules" ref="ruleForm" label-width="120px" class="demo-ruleForm" :label-position="labelPosition">
+        <el-form :model="ruleForm" status-icon :rules="rules3" ref="ruleForm" label-width="120px" class="demo-ruleForm" :label-position="labelPosition">
             <el-form-item label="Username or Email " prop="name">
                 <el-input v-model="ruleForm.name" placeholder=""></el-input>
             </el-form-item>
@@ -24,15 +24,12 @@
     dataSuccessMessage: {
       type: String,
     }
-  }, 
+  },
     data() {
-        var validatePass = (rule, value, callback) => {
+        var validatePass3 = (rule, value, callback) => {
         if (value === '') {
           callback(new Error('Please input the password'));
-        } else {
-          if (this.ruleForm.checkPass !== '') {
-            this.$refs.ruleForm.validateField('checkPass');
-          }
+        } else{
           callback();
         }
       };
@@ -42,12 +39,12 @@
           name: '',
           pass: ''
         },
-        rules: {
+        rules3: {
           name: [
-            { message: 'Please input Username or Email', trigger: 'blur' }  
+            { required: true, message: 'Please input Username or Email', trigger: 'blur' }  
           ],
           pass: [
-            { validator: validatePass, trigger: 'blur' }
+            { validator: validatePass3, trigger: 'blur' }
           ]
         }
       }

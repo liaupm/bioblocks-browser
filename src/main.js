@@ -1,7 +1,7 @@
 import Vue from "vue";
 import VueRouter from "vue-router";
-import Master from "./components/layouts/Master";
-//import App from "./App.vue";
+//import Master from "./components/layouts/Master";
+import App from "./App.vue";
 import router from "./router";
 import store from "./store";
 import "./plugins/element.js";
@@ -32,5 +32,5 @@ Vue.use(VueRouter);
 new Vue({
   router: router,
   store: store,
-  render: h => h(Master)
+  render: h => h(App)
 }).$mount("#app");
