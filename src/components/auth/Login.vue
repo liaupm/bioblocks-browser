@@ -1,7 +1,8 @@
 <template>
     <div class ="login-form">
+      <div class="login-border">
         <h2>Login</h2>
-        
+        <div class="login-width">
         <el-form :model="ruleForm" status-icon :rules="rules3" ref="ruleForm" label-width="120px" class="demo-ruleForm" :label-position="labelPosition">
             <el-form-item label="Username or Email " prop="name">
                 <el-input v-model="ruleForm.name" placeholder=""></el-input>
@@ -13,7 +14,11 @@
                 <el-button type="success" @click="submitForm('ruleForm')">Sing In</el-button>
             </el-form-item>
         </el-form>
-       
+        </div>
+      </div>
+      <div class="form-log-reg">
+        <a><router-link :to="{ name: 'register' }">Create an account</router-link></a>
+      </div>
     </div>
 </template>
 

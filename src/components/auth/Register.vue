@@ -1,23 +1,27 @@
 <template>
     <div class ="login-form">
+      <div class="login-border">
         <h2>Register</h2>
-        <el-form :model="ruleForm1" status-icon :rules="rules1" ref="ruleForm1" label-width="120px" class="demo-ruleForm1" :label-position="labelPosition">
-            <el-form-item label="Username" prop="username">
-                <el-input v-model="ruleForm1.username" placeholder="username"></el-input>
-            </el-form-item>
-             <el-form-item label="Email" prop="email">
-                <el-input v-model="ruleForm1.email" placeholder="you@example.com"></el-input>
-            </el-form-item>
-            <el-form-item label="Password" prop="pass">
-                <el-input type="password" v-model="ruleForm1.pass" autocomplete="off"></el-input>
-            </el-form-item>
-            <el-form-item label="Confirm" prop="checkPass">
-                <el-input type="password" v-model="ruleForm1.checkPass" autocomplete="off"></el-input>
-            </el-form-item>
-             <el-form-item>
-                <el-button type="success" @click="submitForm('ruleForm1')">Sing Up</el-button>
-            </el-form-item>
-        </el-form>
+          <div class="login-width">
+            <el-form :model="ruleForm1" status-icon :rules="rules1" ref="ruleForm1" label-width="120px" class="demo-ruleForm1" :label-position="labelPosition">
+              <el-form-item label="Username" prop="username">
+                  <el-input v-model="ruleForm1.username" placeholder="username"></el-input>
+              </el-form-item>
+              <el-form-item label="Email" prop="email">
+                  <el-input v-model="ruleForm1.email" placeholder="you@example.com"></el-input>
+              </el-form-item>
+              <el-form-item label="Password" prop="pass">
+                  <el-input type="password" v-model="ruleForm1.pass" autocomplete="off"></el-input>
+              </el-form-item>
+              <el-form-item label="Confirm" prop="checkPass">
+                  <el-input type="password" v-model="ruleForm1.checkPass" autocomplete="off"></el-input>
+              </el-form-item>
+              <el-form-item>
+                  <el-button type="success" @click="submitForm('ruleForm1')">Sing Up</el-button>
+              </el-form-item>
+            </el-form>
+          </div>
+      </div>
     </div>
 </template>
 
